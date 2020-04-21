@@ -22,7 +22,7 @@ MOVWF CMCON
  
 BCF STATUS, RP1 ;Cambiar al banco 1
 BSF STATUS, RP0 
-MOVLW b'01000000' ;Establecer puerto B como salida excepto RB1
+MOVLW b'00000010' ;Establecer puerto B como salida excepto RB1
 MOVWF TRISB 
 BCF STATUS, RP0 ;Regresar al banco 0
 #define led PORTB, 0
